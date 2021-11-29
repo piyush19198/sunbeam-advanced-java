@@ -48,10 +48,11 @@ public class TopicServlet extends HttpServlet {
 		response.setContentType("text/html");
 		try (PrintWriter pw = response.getWriter()) {
 			List<Topic> topics = new ArrayList<Topic>(dao.getAllTopics());
-			pw.print("<form action = 'topics'>" + "<input type = 'radio' name = 'topicname'>" + topics.get(0).getName()
+			pw.print("<form action = 'tutorials'>" + "<input type = 'radio' name = 'topicname'>" + topics.get(0).getName()
 					+ "</input>" + "<input type = 'radio' name = 'topicname'>" + topics.get(1).getName() + "</input>"
 					+ "<input type = 'radio' name = 'topicname'>" + topics.get(2).getName() + "</input>"
-					+ "<input type = 'radio' name = 'topicname'>" + topics.get(3).getName() + "</input>");
+					+ "<input type = 'radio' name = 'topicname'>" + topics.get(3).getName() + "</input>"
+					+ "<input type='submit' value='Choose Tutorial'>");
 		} catch (Exception e) {
 			throw new ServletException("!!!ERROR IN DO-POST OF : " + getClass() + "!!!", e);
 		}
