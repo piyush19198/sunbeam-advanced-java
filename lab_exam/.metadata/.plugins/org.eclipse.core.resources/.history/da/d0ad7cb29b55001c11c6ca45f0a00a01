@@ -1,0 +1,16 @@
+package com.sunbean.entities;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+//| empid | name   | email             | password |
+@Entity
+@Table(name = "user")
+public class User {
+	@Id
+	private int empid;
+	private String name;
+	private String email;
+	private String password;
+}

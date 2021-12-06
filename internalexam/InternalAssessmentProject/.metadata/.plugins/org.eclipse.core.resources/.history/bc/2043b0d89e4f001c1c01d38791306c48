@@ -1,0 +1,14 @@
+package com.sunbeam.services;
+
+public class VendorServiceImpl {
+	@Autowired
+	VendorDaoImpl vendorDao;
+
+	public VendorServiceImpl() {
+
+	}
+
+	@Autowired
+	public VendorServiceImpl(VendorDaoImpl vendorDao) {
+	}
+}

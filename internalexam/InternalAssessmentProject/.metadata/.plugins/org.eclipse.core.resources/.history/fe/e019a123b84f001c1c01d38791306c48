@@ -1,0 +1,36 @@
+package com.sunbeam.daos;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+import com.sunbeam.pojos.Vendor;
+
+@Repository
+public class VendorDaoImpl {
+	private JdbcTemplate jdbcTemplate;
+
+	@Autowired
+	VendorRowMapper vendorMapper = new VendorRowMapper();
+
+	public VendorDaoImpl(JdbcTemplate jdbcTemplate) {
+		this.jdbcTemplate = jdbcTemplate;
+	}
+
+	public Vendor getVendor(String email) {
+		String sql = "select * from vendors where email = ?";
+		List<Vendor> vendorList = jdbcTemplate.query(sql, vendorMapper, email);
+		if (vendorList.isEmpty())
+			return null;
+		else
+			return vendorList.get(0);
+	}
+	
+	public List<Vendor> getAllVendors() {
+		String sql = "select id,name,email,city,cell_no,reg_amount,reg_date,role from vendors";
+		List<Vendor> allVendors = jdbcTemplate.query(sql, vendorMapper);
+		return allVendors;
+	}
+}

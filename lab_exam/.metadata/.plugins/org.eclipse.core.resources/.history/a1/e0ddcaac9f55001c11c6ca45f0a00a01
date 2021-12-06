@@ -1,0 +1,7 @@
+package com.sunbean.entities;
+
+@SessionScope
+@Component
+public class Credentials {
+	
+}

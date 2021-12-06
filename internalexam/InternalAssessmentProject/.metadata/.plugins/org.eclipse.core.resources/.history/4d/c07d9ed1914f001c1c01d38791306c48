@@ -1,0 +1,9 @@
+package com.sunbeam.daos;
+
+import com.sunbeam.pojos.Vendor;
+
+public class VendorRowMapper implements RowMapper {
+	Vendor vendor = new Vendor();vendor.setId(rs.getInt(1));
+
+	public Object mapRow
+}

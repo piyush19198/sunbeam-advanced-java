@@ -1,0 +1,38 @@
+package com.sunbean.servicescontrollers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.sunbean.services.MobileServices;
+import com.sunbean.services.MobileServicesImpl;
+import com.sunbean.services.UserServices;
+
+@Controller
+public class UserController {
+	private UserServices uservice;
+	private MobileServices mobservice;
+	private MobileServicesImpl mobserviceimpl;
+	
+	@Autowired
+	public UserController(UserServices uservice, MobileServices mobservice, MobileServicesImpl mobserviceimpl) {
+		super();
+		this.uservice = uservice;
+		this.mobservice = mobservice;
+		this.mobserviceimpl = mobserviceimpl;
+	}
+
+	public UserController() {
+		super();
+	}
+	
+	@RequestMapping("/welcome")
+	public String index() {
+		return "welcome";
+	}
+	
+	@RequestMapping("/login")
+	public String login() {
+		return "login";
+	}
+}

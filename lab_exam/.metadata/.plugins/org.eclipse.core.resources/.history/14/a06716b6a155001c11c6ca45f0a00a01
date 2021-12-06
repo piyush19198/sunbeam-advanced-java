@@ -1,0 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>MOBILE DETAILS</title>
+</head>
+<body>
+	<h2>MOBILE LIST</h2>
+	<table>
+		<thead>
+		<tr>
+			<th>ID</th>
+			<th>COMPANYNAME</th>
+			<th>MODEL</th>
+			<th>PRICE</th>
+		</tr>
+		</thead>
+	</table>
+</body>
+</html>

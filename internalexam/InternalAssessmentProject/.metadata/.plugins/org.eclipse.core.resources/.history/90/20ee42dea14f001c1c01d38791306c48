@@ -1,0 +1,27 @@
+package com.sunbeam.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.sunbeam.daos.VendorDaoImpl;
+import com.sunbeam.pojos.Vendor;
+
+@Service
+public class VendorServiceImpl {
+	@Autowired
+	VendorDaoImpl vendorDao;
+
+	public VendorServiceImpl() {
+	}
+
+	@Autowired
+	public VendorServiceImpl(VendorDaoImpl vendorDao) {
+		super();
+		this.vendorDao = vendorDao;
+	}
+
+	public Vendor getVendor(String email) {
+		return vendorDao.getVendor(email);
+	}
+	
+}

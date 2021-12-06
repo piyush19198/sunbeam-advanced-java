@@ -1,0 +1,12 @@
+package com.sunbeam.daos;
+
+import com.sunbeam.pojos.Vendor;
+import org.springframework.jdbc.core.RowMapper;
+
+public class VendorRowMapper implements RowMapper {
+	
+
+	public Object mapRow(ResultSet rs,int rowNum) throws SQLException{
+		Vendor vendor = new Vendor();vendor.setId(rs.getInt(1));
+	}
+}

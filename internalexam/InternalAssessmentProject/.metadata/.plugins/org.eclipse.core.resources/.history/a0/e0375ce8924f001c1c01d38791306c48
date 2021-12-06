@@ -1,0 +1,28 @@
+package com.sunbeam.daos;
+
+import com.sunbeam.pojos.Vendor;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import org.springframework.jdbc.core.RowMapper;
+
+public class VendorRowMapper implements RowMapper {
+	
+	@Override
+	public Object mapRow(ResultSet rs,int rowNum) throws SQLException{
+		Vendor vendor = new Vendor();
+		vendor.setId(rs.getInt(1));
+		vendor.setName(rs.getString(2));
+		vendor.setEmail(rs.getString(3));
+		vendor.setPassword(rs.getString(4));
+		vendor.setRole(rs.getString(5));
+		vendor.setRegAmount(rs.getDouble(6));
+		vendor.setCellNo(rs.getString(7));
+		vendor.setCity(rs.getString(8));
+		vendor.setDate(rs.getDate(9));
+		return vendor;
+	}
+
+
+}

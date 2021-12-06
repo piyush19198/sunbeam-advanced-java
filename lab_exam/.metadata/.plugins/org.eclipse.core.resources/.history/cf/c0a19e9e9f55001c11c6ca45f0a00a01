@@ -1,0 +1,5 @@
+package com.sunbean.entities;
+
+public class Credentials {
+
+}

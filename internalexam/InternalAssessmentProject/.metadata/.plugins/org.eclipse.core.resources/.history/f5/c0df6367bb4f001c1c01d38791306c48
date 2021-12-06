@@ -1,0 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>VENDORLIST JSP</title>
+</head>
+<body>
+	<h4>Vendor Details</h4>
+	
+	<a href="logout">LOGOUT</a>
+</body>
+</html>

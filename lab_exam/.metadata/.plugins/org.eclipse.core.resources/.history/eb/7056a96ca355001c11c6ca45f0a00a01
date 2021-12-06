@@ -1,0 +1,5 @@
+package com.sunbean.services;
+
+public interface MobileServices {
+
+}

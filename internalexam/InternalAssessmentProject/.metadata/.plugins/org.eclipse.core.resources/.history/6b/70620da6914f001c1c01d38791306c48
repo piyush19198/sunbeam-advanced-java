@@ -1,0 +1,8 @@
+package com.sunbeam.daos;
+
+import com.sunbeam.pojos.Vendor;
+
+public class VendorRowMapper {
+	Vendor vendor = new Vendor();
+	vendorsetId(rs.getInt(1));
+}

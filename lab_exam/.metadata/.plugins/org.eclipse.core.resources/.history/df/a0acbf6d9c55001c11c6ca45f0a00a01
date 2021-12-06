@@ -1,0 +1,5 @@
+package com.sunbean.daos;
+
+public interface UserDao {
+
+}

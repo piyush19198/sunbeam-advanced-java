@@ -1,0 +1,25 @@
+INSERT INTO books VALUES (11,'EXPLORING C','KANETKAR','C',123.4);
+INSERT INTO books VALUES (12,'POINTERS IN C','KANETKAR','C',370);
+INSERT INTO books VALUES (13,'ANSI C PROGRAMMING','BALGURUSWAMI','C',330);
+INSERT INTO books VALUES (14,'ANSI C PROGRAMMING','RITCHIE','C',140);
+INSERT INTO books VALUES (21,'C++ COMPLETE REFERENCE','SCHILDT','CPP',410);
+INSERT INTO books VALUES (22,'C++ PRIMER','LIPPMAN','CPP',620);
+INSERT INTO books VALUES (23,'C++ PROGRAMMING LANGUAGE','STROUSTRUP','CPP',540);
+INSERT INTO books VALUES (31,'JAVA COMPLETE REFERENCE','SCHILDT','JAVA',520);
+INSERT INTO books VALUES (32,'CORE JAVA VOLUME I','HOARSMAN','JAVA',575);
+INSERT INTO books VALUES (33,'JAVA PROGRAMMING LANGUAGE','JAMES','JAVA',450);
+INSERT INTO books VALUES (41,'OPERATING SYSTEM CONCEPTS','GALVIN','OS',567.3);
+INSERT INTO books VALUES (42,'DESIGN OF UNIX OS','BACH','OS',421);
+INSERT INTO books VALUES (43,'UNIX INTERNALS','VAHALIA','OS',352);
+
+INSERT INTO customers(name, password, mobile, address, email, birth,enabled) VALUES
+('admin','$2a$10$Smvo81bOY4J1jg5vxosf2..VzXrhF2LNQERaLVT0M0p4VQKPLTLb2','1111111111','Online Book Shop','admin@onlinebooks.com', '1970-01-01', 1),
+('nilesh', '$2a$10$9AdMO3jAMhSkz4ffLUYvneWVHc6SKlsY.I8EwJtez8odBTIO0PSlS', '9527331338', 'Katraj, Pune', 'nilesh@sunbeaminfo.com', '1983-09-28', 1),
+('prashant','$2a$10$47D9E5QGX9KZed3YA.9Vrua3jLHGIQbLzvjNm8SYybBhUFxy42GgC','9881208114','Peth, Karad','prashant@sunbeaminfo.com', '1975-12-01', 1),
+('nitin', '$2a$10$pZZHHEBCo7SPNVcwLWODlevBhTAUt9eiK/fYtA6DIIxqBpeZz791G', '9881208115', 'Padmavati, Pune', 'nitin@sunbeaminfo.com', '1974-01-23', 1);
+
+INSERT INTO roles VALUES
+('admin@onlinebooks.com', 'ROLE_ADMIN'),
+('nilesh@sunbeaminfo.com', 'ROLE_CUSTOMER'),
+('prashant@onlinebooks.com', 'ROLE_CUSTOMER'),
+('nitin@onlinebooks.com', 'ROLE_CUSTOMER');

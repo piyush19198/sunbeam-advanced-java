@@ -1,0 +1,14 @@
+package com.sunbean.servicescontrollers;
+
+import org.springframework.stereotype.Controller;
+
+import com.sunbean.services.MobileServices;
+import com.sunbean.services.MobileServicesImpl;
+import com.sunbean.services.UserServices;
+
+@Controller
+public class UserController {
+	private UserServices uservice;
+	private MobileServices mobservice;
+	private MobileServicesImpl mobserviceimpl;
+}

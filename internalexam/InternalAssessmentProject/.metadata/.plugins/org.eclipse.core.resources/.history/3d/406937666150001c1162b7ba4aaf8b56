@@ -1,0 +1,71 @@
+package com.sunbeam;
+
+import java.util.List;
+
+import javax.servlet.http.HttpSession;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.sunbeam.pojos.Credential;
+import com.sunbeam.pojos.Vendor;
+import com.sunbeam.services.VendorServiceImpl;
+
+@Controller
+public class ApplicationController {
+	@Autowired
+	VendorServiceImpl vendorService;
+
+	public ApplicationController(VendorServiceImpl vendorService) {
+		super();
+		this.vendorService = vendorService;
+	}
+
+	@RequestMapping("/welcome")
+	public String home(Model model) {
+		return "index";
+	}
+
+	@RequestMapping("/login")
+	public String login(Model model) {
+		Credential cred = new Credential("guest@gmail.com", "");
+		model.addAttribute("command", cred);
+		return "login";
+	}
+
+	@RequestMapping("/validate")
+	public String validate(Credential cred, HttpSession session) {
+		Vendor v = vendorService.authenticateVendor(cred.getEmail(), cred.getPassword());
+		session.setAttribute("vendor", v);
+		if (v == null) {
+			return "failed";
+		}
+		if (v.getRole().equals("admin"))
+			return "redirect:admin";
+		return "vendorList";
+	}
+
+	@RequestMapping("/logout")
+	public String logout(HttpSession session, Model model) {
+		Vendor v = (Vendor) session.getAttribute("vendor");
+		model.addAttribute("vendor", v);
+		session.invalidate();
+		return "logout";
+	}
+
+	@RequestMapping("/admin")
+	public String validate(Model model) {
+		List<Vendor> allVendors = vendorService.getAdminContents();
+		model.addAttribute("allVendors", allVendors);
+		return "admin";
+	}
+
+	@RequestMapping("/update")
+	public String updateVendorDetails(@RequestParam("id"), Model model) {
+		Vendor vendor = vendorService.getVendorDetails(id);
+		model.setAtt
+		return "updateVendor";
+	}
+}

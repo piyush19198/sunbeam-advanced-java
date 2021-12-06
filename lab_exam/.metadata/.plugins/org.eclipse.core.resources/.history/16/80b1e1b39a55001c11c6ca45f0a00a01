@@ -1,0 +1,9 @@
+package com.sunbean.entities;
+
+//| id | companyname | model | price |
+public class Mobile {
+	private int id;
+	private String  companyname;
+	private String model;
+	private String price;
+}

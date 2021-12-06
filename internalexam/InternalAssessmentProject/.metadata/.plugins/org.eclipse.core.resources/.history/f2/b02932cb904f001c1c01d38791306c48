@@ -1,0 +1,12 @@
+package com.sunbeam.pojos;
+
+public class Vendor {
+	private int id;
+	private String name;
+	private String email;
+	private String password;
+	private String city;
+	private String role;
+	private String cellNo;
+	private double regAmount;
+}

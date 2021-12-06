@@ -1,0 +1,16 @@
+package com.sunbean.entities;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+//| id | companyname | model | price |
+public class Mobile {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	private String  companyname;
+	private String model;
+	private String price;
+
+}

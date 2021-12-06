@@ -1,0 +1,19 @@
+package com.sunbean;
+
+import java.util.Date;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class TrialController {
+	@RequestMapping("/welcome")
+	public String trial(Model model) {
+		Date date = new Date();
+		model.addAttribute("date",date);
+		System.out.println("Date");
+		return "welcome";
+	}
+	
+}

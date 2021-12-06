@@ -1,0 +1,5 @@
+package com.sunbean.servicescontrollers;
+
+public class UserController {
+
+}
